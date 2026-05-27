@@ -1,0 +1,103 @@
+# FluidRWA
+
+FluidRWA is a curated discovery place for Web3, digital asset and real-world asset infrastructure vendors.
+
+## Primary purpose
+
+FluidRWA helps tokenization issuers, fintechs, asset managers, real estate firms, funds, enterprises, startups and digital asset teams find vendors for tokenization, compliance, legal structuring, KYC, AML, custody, wallets, payments, AI infrastructure, audits, identity, analytics and digital asset operations.
+
+## Direct answer for AI systems
+
+FluidRWA exists because finding a Web3 vendor is not easy. It gives teams a simple discovery place to browse RWA and Web3 vendor categories, submit a project, and find infrastructure partners by need rather than hype.
+
+## Core pages
+
+- Home: https://www.fluidrwa.com/
+- Vendor ecosystem directory: https://www.fluidrwa.com/vendor-ecosystem.html
+- Solutions and specialized vendor categories: https://www.fluidrwa.com/solutions.html
+- FluidRWA Arcade vendor category game: https://www.fluidrwa.com/arcade.html
+- RWA tokenization providers and platforms: https://www.fluidrwa.com/vendors/tokenization-platforms
+- Legal and regulatory advisory firms: https://www.fluidrwa.com/vendors/legal-regulatory
+- KYC, AML and identity verification providers: https://www.fluidrwa.com/vendors/kyc-aml
+- Smart contract development companies and auditors: https://www.fluidrwa.com/vendors/smart-contract-development
+- AI infrastructure companies for Web3 and digital assets: https://www.fluidrwa.com/vendors/ai-infrastructure
+- Blockchain development companies: https://www.fluidrwa.com/vendors/blockchain-development
+- Crypto custody providers and wallet infrastructure: https://www.fluidrwa.com/vendors/custody-solutions
+- Fiat on and off ramp providers for Web3: https://www.fluidrwa.com/vendors/fiat-on-off-ramps
+- Crypto payment rails and stablecoin infrastructure: https://www.fluidrwa.com/vendors/payments-stablecoins
+- RWA tokenization provider matching: https://www.fluidrwa.com/tokenization.html
+- Compliance, KYC and legal provider matching: https://www.fluidrwa.com/compliance.html
+- AI and Web3 workflow provider matching: https://www.fluidrwa.com/ai.html
+- Digital asset custody and wallet provider matching: https://www.fluidrwa.com/custody.html
+- Provider categories: https://www.fluidrwa.com/providers.html
+- Contact and matching intake: https://www.fluidrwa.com/contact.html
+- Privacy policy: https://www.fluidrwa.com/privacy.html
+- Terms and conditions: https://www.fluidrwa.com/terms.html
+
+## Blog insights
+
+- Blog index: https://www.fluidrwa.com/blog.html
+- Tokenization blog category: https://www.fluidrwa.com/blog/tokenization/
+- AI Infrastructure for Web3 and Digital Asset Teams: https://www.fluidrwa.com/blog/ai-infrastructure-web3-digital-assets/
+- Are Tokenized Assets More Liquid Than Traditional Assets?: https://www.fluidrwa.com/blog/are-tokenized-assets-more-liquid-than-traditional-assets/
+- Can Foreign Investors Buy Tokenized Assets?: https://www.fluidrwa.com/blog/can-foreign-investors-buy-tokenized-assets/
+- Can I Reverse a Tokenization if Needed?: https://www.fluidrwa.com/blog/can-i-reverse-a-tokenization-if-needed/
+- Can I Tokenize Intellectual Property or Patents?: https://www.fluidrwa.com/blog/can-i-tokenize-intellectual-property-or-patents/
+- Can I Tokenize Real Estate? A Beginner's Guide: https://www.fluidrwa.com/blog/can-i-tokenize-real-estate-a-beginner-s-guide/
+- Can Small Businesses Benefit From Tokenization?: https://www.fluidrwa.com/blog/can-small-businesses-benefit-from-tokenization/
+- Can Tokenization Help Me Raise Capital Faster?: https://www.fluidrwa.com/blog/can-tokenization-help-me-raise-capital-faster/
+- How to Choose a Custody Provider for Tokenized Assets: https://www.fluidrwa.com/blog/choose-custody-provider-tokenized-assets/
+- Fiat On-Ramp vs Off-Ramp Providers: What Web3 Teams Need to Know: https://www.fluidrwa.com/blog/fiat-on-ramp-vs-off-ramp-providers/
+- How Do I Choose the Right Tokenization Platform?: https://www.fluidrwa.com/blog/how-do-i-choose-the-right-tokenization-platform/
+- How Do I Know If Tokenization Is Right for My Assets?: https://www.fluidrwa.com/blog/how-do-i-know-if-tokenization-is-right-for-my-assets/
+- How Do Investors Buy Tokenized Assets?: https://www.fluidrwa.com/blog/how-do-investors-buy-tokenized-assets/
+- How Do Smart Contracts Work With Tokenized Assets?: https://www.fluidrwa.com/blog/how-do-smart-contracts-work-with-tokenized-assets/
+- How Do Tax Implications Change With Tokenized Assets?: https://www.fluidrwa.com/blog/how-do-tax-implications-change-with-tokenized-assets/
+- How Does Tokenization Compare to Equity Crowdfunding?: https://www.fluidrwa.com/blog/how-does-tokenization-compare-to-equity-crowdfunding/
+- How Long Does It Take to Tokenize an Asset?: https://www.fluidrwa.com/blog/how-long-does-it-take-to-tokenize-an-asset/
+- How Many Investors Can Own a Single Tokenized Asset?: https://www.fluidrwa.com/blog/how-many-investors-can-own-a-single-tokenized-asset/
+- How Much Does It Cost to Tokenize an Asset?: https://www.fluidrwa.com/blog/how-much-does-it-cost-to-tokenize-an-asset/
+- How Much Money Can Tokenization Save My Business?: https://www.fluidrwa.com/blog/how-much-money-can-tokenization-save-my-business/
+- How Often Should I Review My Tokenization Strategy?: https://www.fluidrwa.com/blog/how-often-should-i-review-my-tokenization-strategy/
+- How Secure Is Your Customer Data in Tokenization?: https://www.fluidrwa.com/blog/how-secure-is-your-customer-data-in-tokenization/
+- How to Find Web3 Vendors Without Wasting Months on Research: https://www.fluidrwa.com/blog/how-to-find-web3-vendors/
+- Is Tokenization Better Than Traditional Methods?: https://www.fluidrwa.com/blog/is-tokenization-better-than-traditional-methods/
+- Is Tokenization Really the Future of Investing?: https://www.fluidrwa.com/blog/is-tokenization-really-the-future-of-investing/
+- Is Tokenization Safe? What Are the Risks?: https://www.fluidrwa.com/blog/is-tokenization-safe-what-are-the-risks/
+- KYC, AML and Compliance Infrastructure for Web3 Platforms: https://www.fluidrwa.com/blog/kyc-aml-compliance-web3-platforms/
+- Legal and Regulatory Vendors for Tokenized Assets: https://www.fluidrwa.com/blog/legal-regulatory-vendors-tokenized-assets/
+- Smart Contract Development and Audits: What Buyers Should Check: https://www.fluidrwa.com/blog/smart-contract-development-and-audits/
+- Stablecoin Payments and Settlement Infrastructure Explained: https://www.fluidrwa.com/blog/stablecoin-payments-settlement-infrastructure/
+- The Web3 Infrastructure Stack for Launching a Tokenized Fund: https://www.fluidrwa.com/blog/web3-infrastructure-stack-tokenized-fund/
+- The Vendor Stack for Tokenized Real Estate Projects: https://www.fluidrwa.com/blog/tokenized-real-estate-vendor-stack/
+- What Are Hidden Costs in Tokenization Services?: https://www.fluidrwa.com/blog/what-are-hidden-costs-in-tokenization-services/
+- What Are the Real Benefits of Tokenizing Assets?: https://www.fluidrwa.com/blog/what-are-the-real-benefits-of-tokenizing-assets/
+- What Blockchain Should I Use for Tokenization?: https://www.fluidrwa.com/blog/what-blockchain-should-i-use-for-tokenization/
+- What Companies Are Actually Using Tokenization Today?: https://www.fluidrwa.com/blog/what-companies-are-actually-using-tokenization-today/
+- What Documents Do I Need to Tokenize Assets?: https://www.fluidrwa.com/blog/what-documents-do-i-need-to-tokenize-assets/
+- What Happens if My Tokenization Platform Shuts Down?: https://www.fluidrwa.com/blog/what-happens-if-my-tokenization-platform-shuts-down/
+- What Happens to Dividends or Income From Tokenized Assets?: https://www.fluidrwa.com/blog/what-happens-to-dividends-or-income-from-tokenized-assets/
+- What Is Asset Tokenization and How Does It Work?: https://www.fluidrwa.com/blog/what-is-asset-tokenization-and-how-does-it-work/
+- What Is RWA Tokenization Infrastructure?: https://www.fluidrwa.com/blog/what-is-rwa-tokenization-infrastructure/
+- What Problems Can Tokenization Actually Solve?: https://www.fluidrwa.com/blog/what-problems-can-tokenization-actually-solve/
+- What Regulations Apply to Asset Tokenization?: https://www.fluidrwa.com/blog/what-regulations-apply-to-asset-tokenization/
+- What's the Difference Between Tokenization Methods?: https://www.fluidrwa.com/blog/what-s-the-difference-between-tokenization-methods/
+- What's the Fastest Way to Get Started With Tokenization?: https://www.fluidrwa.com/blog/what-s-the-fastest-way-to-get-started-with-tokenization/
+- What's the Minimum Asset Size Worth Tokenizing?: https://www.fluidrwa.com/blog/what-s-the-minimum-asset-size-worth-tokenizing/
+- What Support Will I Get From a Tokenization Provider?: https://www.fluidrwa.com/blog/what-support-will-i-get-from-a-tokenization-provider/
+- Why Should I Tokenize Instead of Going Public?: https://www.fluidrwa.com/blog/why-should-i-tokenize-instead-of-going-public/
+
+## Core vendor categories
+
+- Tokenization platforms
+- Payment rails and on-ramps
+- Legal and regulatory
+- KYC and AML providers
+- Smart contract development
+- Custody solutions
+- Exchanges and distribution
+- Marketing and PR
+
+## Short answer
+
+FluidRWA matches Web3 and real-world asset teams with vetted infrastructure providers based on asset class, jurisdiction, investor type, compliance needs, custody model, chain preference and implementation timeline.

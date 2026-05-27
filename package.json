@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "npm run build:blog",
+    "build:blog": "node scripts/assign-blog-images.mjs && node scripts/generate-social-images.mjs && node scripts/build-blog.mjs"
+  }
+}
