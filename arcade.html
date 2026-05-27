@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FluidRWA Arcade | Web3 Vendor Discovery Games</title>
+  <meta name="description" content="Play FluidRWA arcade games that help teams understand Web3 vendor categories, tokenization workflows, compliance checks and digital asset infrastructure.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="FluidRWA">
+  <meta name="theme-color" content="#ffe36e">
+  <link rel="canonical" href="https://www.fluidrwa.com/arcade.html">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preload" as="image" href="assets/fluidrwa-small-logo.png" fetchpriority="high">
+  <link rel="stylesheet" href="assets/styles-yellow-blue.css?v=forms-1">
+  <meta name="twitter:image" content="https://www.fluidrwa.com/assets/social/arcade.png">
+  <meta name="twitter:description" content="Learn the Web3 vendor ecosystem through quick interactive games.">
+  <meta name="twitter:title" content="FluidRWA Arcade">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image:alt" content="FluidRWA Arcade">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image" content="https://www.fluidrwa.com/assets/social/arcade.png">
+  <meta property="og:url" content="https://www.fluidrwa.com/arcade.html">
+  <meta property="og:description" content="Learn the Web3 vendor ecosystem through quick interactive games.">
+  <meta property="og:title" content="FluidRWA Arcade">
+  <meta property="og:site_name" content="FluidRWA">
+  <meta property="og:type" content="website">
+  <style>
+    .arcade-page{background:#f8fbff}
+    .arcade-hero{padding:136px 0 46px;background:radial-gradient(circle at 12% 15%,rgba(255,227,110,.42),transparent 28%),radial-gradient(circle at 88% 18%,rgba(76,178,224,.24),transparent 34%),linear-gradient(135deg,#fffdf1 0%,#eff8ff 58%,#f8fbff 100%)}
+    .arcade-hero-grid{display:grid;grid-template-columns:minmax(0,.84fr) minmax(320px,1.16fr);gap:clamp(24px,5vw,58px);align-items:center}
+    .arcade-hero h1{margin:0;color:#12213a;font-family:var(--fluid-display);font-size:clamp(36px,5vw,58px);font-weight:650;letter-spacing:-.01em;line-height:1.06}
+    .arcade-hero p:not(.eyebrow){color:rgba(18,33,58,.72);font-size:18px;line-height:1.7}
+    .arcade-shell{border:1px solid rgba(38,100,169,.13);border-radius:28px;background:rgba(255,255,255,.76);box-shadow:0 28px 80px rgba(18,33,58,.1);backdrop-filter:blur(18px);overflow:hidden}
+    .arcade-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(38,100,169,.1)}
+    .arcade-tab{min-height:58px;border:0;background:rgba(255,255,255,.76);color:#12213a;cursor:pointer;font-weight:950;padding:12px 10px}
+    .arcade-tab[aria-selected="true"]{background:#ffe36e;color:#12213a}
+    .game-panel{display:none;padding:clamp(18px,4vw,30px)}
+    .game-panel.active{display:block}
+    .game-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+    .game-stats div{border:1px solid rgba(38,100,169,.1);border-radius:16px;background:rgba(255,255,255,.74);padding:12px}
+    .game-stats span{display:block;color:rgba(18,33,58,.55);font-size:10px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
+    .game-stats strong{display:block;margin-top:4px;color:#2664a9;font-family:var(--fluid-display);font-size:26px;line-height:1}
+    .scenario-card{display:grid;align-content:center;gap:10px;min-height:132px;padding:20px;border:1px solid rgba(38,100,169,.12);border-radius:22px;background:linear-gradient(135deg,rgba(255,227,110,.28),rgba(234,249,255,.82))}
+    .scenario-card span{color:#2664a9;font-size:11px;font-weight:950;letter-spacing:.13em;text-transform:uppercase}
+    .scenario-card strong{color:#12213a;font-family:var(--fluid-display);font-size:clamp(22px,3.4vw,32px);font-weight:650;line-height:1.15}
+    .choice-grid,.memory-grid,.stack-grid,.catch-grid{display:grid;gap:10px;margin-top:16px}
+    .choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .catch-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .memory-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .game-btn,.memory-card{min-height:64px;border:1px solid rgba(38,100,169,.13);border-radius:18px;background:rgba(255,255,255,.86);color:#12213a;cursor:pointer;font:inherit;font-weight:900;text-align:left;padding:14px;box-shadow:0 12px 28px rgba(18,33,58,.05);transition:transform .16s ease,border-color .16s ease,background .16s ease}
+    .game-btn:hover,.game-btn:focus-visible,.memory-card:hover,.memory-card:focus-visible{transform:translateY(-2px);border-color:rgba(76,178,224,.48);outline:none}
+    .game-btn.correct,.memory-card.matched{background:rgba(37,160,116,.13);border-color:rgba(37,160,116,.42)}
+    .game-btn.wrong{background:rgba(210,81,81,.1);border-color:rgba(210,81,81,.35)}
+    .memory-card{text-align:center;display:grid;place-items:center;aspect-ratio:1.08;color:#2664a9}
+    .memory-card.revealed,.memory-card.matched{color:#12213a;background:#fff4b8}
+    .game-feedback{min-height:44px;margin-top:14px;color:rgba(18,33,58,.7);font-weight:800;line-height:1.45}
+    .game-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .game-actions button,.game-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:999px;padding:10px 16px;font-weight:950;text-decoration:none}
+    .game-actions button{border:0;background:#12213a;color:#fff;cursor:pointer}
+    .game-actions a{border:1px solid rgba(38,100,169,.14);background:rgba(255,255,255,.74);color:#12213a}
+    .mini-section{padding:54px 0 72px}
+    .mini-section h2{color:#12213a;font-family:var(--fluid-display);font-size:clamp(30px,4.8vw,48px)}
+    .mini-section p{max-width:760px;color:#5e6b7f;font-size:17px;line-height:1.7}
+    @media(max-width:920px){.arcade-hero-grid{grid-template-columns:1fr}.arcade-hero{padding-top:122px}}
+    @media(max-width:640px){.arcade-tabs{grid-template-columns:repeat(2,1fr)}.choice-grid,.stack-grid,.catch-grid{grid-template-columns:1fr}.memory-grid{grid-template-columns:repeat(3,1fr)}.game-stats strong{font-size:22px}.arcade-hero h1{font-size:clamp(32px,9vw,42px)}.game-btn{min-height:58px}.memory-card{min-height:56px}.arcade-shell{border-radius:22px}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"FluidRWA Arcade","url":"https://www.fluidrwa.com/arcade.html","applicationCategory":"GameApplication","operatingSystem":"Web","description":"A collection of games about Web3 vendor discovery, tokenization, compliance and digital asset infrastructure.","isPartOf":{"@type":"WebSite","name":"FluidRWA","url":"https://www.fluidrwa.com/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+</head>
+<body class="light-home arcade-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header light-header" data-site-header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand light-brand" href="index.html" aria-label="FluidRWA home"><img src="assets/fluidrwa-small-logo.png" alt="FluidRWA"></a>
+      <button class="mobile-toggle light-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
+      <div class="nav-links light-nav-links" data-nav-links>
+        <a href="index.html">Home</a>
+        <a href="vendor-ecosystem.html">Vendors</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="blog.html">Insights</a>
+        <a href="team.html">Team</a>
+        <a href="arcade.html" aria-current="page">Arcade</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-ecosystem-cta" href="vendor-ecosystem.html">Explore Vendor Ecosystem</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="arcade-hero" aria-labelledby="arcade-title">
+      <div class="light-container arcade-hero-grid">
+        <div>
+          <p class="eyebrow light-eyebrow">FluidRWA Arcade</p>
+          <h1 id="arcade-title">Fast games for learning the vendor ecosystem.</h1>
+          <p>Play quick ecosystem challenges that turn Web3 vendor discovery into sharper pattern recognition.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary light-primary" href="#games">Play Now</a>
+            <a class="btn btn-soft" href="vendor-ecosystem.html">Browse Vendors</a>
+          </div>
+        </div>
+        <section class="arcade-shell" id="games" aria-label="FluidRWA arcade games">
+          <div class="arcade-tabs" role="tablist" aria-label="Choose a game">
+            <button class="arcade-tab" type="button" role="tab" aria-selected="true" data-game-tab="match">Match</button>
+            <button class="arcade-tab" type="button" role="tab" aria-selected="false" data-game-tab="stack">Stack</button>
+            <button class="arcade-tab" type="button" role="tab" aria-selected="false" data-game-tab="risk">Risk</button>
+            <button class="arcade-tab" type="button" role="tab" aria-selected="false" data-game-tab="memory">Memory</button>
+          </div>
+
+          <section class="game-panel active" data-game-panel="match">
+            <div class="game-stats"><div><span>Score</span><strong data-match-score>0</strong></div><div><span>Streak</span><strong data-match-streak>0</strong></div><div><span>Time</span><strong data-match-time>45</strong></div></div>
+            <div class="scenario-card"><span data-match-round>Ready</span><strong data-match-scenario>Tap Start to match project needs to vendor categories.</strong></div>
+            <div class="choice-grid" data-match-choices></div>
+            <div class="game-feedback" data-match-feedback>Correct answers add points and time.</div>
+            <div class="game-actions"><button type="button" data-match-start>Start Match</button><a href="submit-project.html">Submit a real project</a></div>
+          </section>
+
+          <section class="game-panel" data-game-panel="stack">
+            <div class="game-stats"><div><span>Built</span><strong data-stack-built>0</strong></div><div><span>Step</span><strong data-stack-step>1</strong></div><div><span>Score</span><strong data-stack-score>0</strong></div></div>
+            <div class="scenario-card"><span>Tokenized Fund Stack</span><strong data-stack-brief>Build the infrastructure stack in the right order.</strong></div>
+            <div class="stack-grid" data-stack-choices></div>
+            <div class="game-feedback" data-stack-feedback>Start with structure, then onboarding, asset safety, money movement and reporting.</div>
+            <div class="game-actions"><button type="button" data-stack-start>Reset Stack</button><a href="solutions.html">Explore workflows</a></div>
+          </section>
+
+          <section class="game-panel" data-game-panel="risk">
+            <div class="game-stats"><div><span>Score</span><strong data-risk-score>0</strong></div><div><span>Round</span><strong data-risk-round>1</strong></div><div><span>Lives</span><strong data-risk-lives>3</strong></div></div>
+            <div class="scenario-card"><span>Compliance Catch</span><strong data-risk-brief>Tap the controls a regulated tokenized asset platform should catch.</strong></div>
+            <div class="catch-grid" data-risk-choices></div>
+            <div class="game-feedback" data-risk-feedback>Catch risk controls. Avoid nice-to-have noise.</div>
+            <div class="game-actions"><button type="button" data-risk-next>Next Set</button><a href="vendors/compliance-infrastructure/">View compliance vendors</a></div>
+          </section>
+
+          <section class="game-panel" data-game-panel="memory">
+            <div class="game-stats"><div><span>Pairs</span><strong data-memory-pairs>0</strong></div><div><span>Moves</span><strong data-memory-moves>0</strong></div><div><span>Best</span><strong data-memory-best>--</strong></div></div>
+            <div class="scenario-card"><span>Category Memory</span><strong>Match vendor categories with the needs they solve.</strong></div>
+            <div class="memory-grid" data-memory-grid></div>
+            <div class="game-feedback" data-memory-feedback>Flip two cards. Match each vendor category with its buyer need.</div>
+            <div class="game-actions"><button type="button" data-memory-reset>Shuffle Cards</button><a href="vendor-ecosystem.html">Open directory</a></div>
+          </section>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="light-footer">
+    <div class="light-container footer-grid-lite footer-simple">
+      <a class="footer-brand-link" href="index.html" aria-label="FluidRWA home"><img class="footer-logo-lite" src="assets/fluidrwa-small-logo.png" alt="FluidRWA"></a>
+      <nav class="footer-legal-links" aria-label="Footer navigation">
+        <a href="contact.html">Contact Us</a>
+        <a href="team.html">Team</a>
+        <a href="arcade.html">Arcade</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </nav>
+    </div>
+    <div class="light-container footer-bottom-lite">© <span data-year></span> FluidRWA.</div>
+  </footer>
+  <script src="assets/site.js?v=forms-1" defer></script>
+  <script>
+    (() => {
+      const $ = (sel, root = document) => root.querySelector(sel);
+      const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+      const shuffle = (items) => [...items].sort(() => Math.random() - 0.5);
+
+      $$(".arcade-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          $$(".arcade-tab").forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
+          $$(".game-panel").forEach((panel) => panel.classList.toggle("active", panel.dataset.gamePanel === tab.dataset.gameTab));
+        });
+      });
+
+      const prompts = [
+        ["A real estate firm wants fractional ownership, investor onboarding, and ownership records.", "Tokenization Platforms"],
+        ["A wallet needs users to buy crypto with cards and local bank methods.", "Fiat On & Off Ramps"],
+        ["A fund needs qualified asset safekeeping, wallet policies, and treasury approvals.", "Custody Solutions"],
+        ["A marketplace must screen sanctions, wallets, and suspicious transactions.", "Compliance Infrastructure"],
+        ["A protocol needs contracts designed, tested, deployed, and maintained.", "Smart Contract Development"],
+        ["A tokenized fund needs counsel for securities, fund structure, and cross-border rules.", "Legal & Regulatory"],
+        ["A digital asset app needs identity checks, KYC, AML, and user verification.", "KYC / AML Providers"],
+        ["A company wants analytics, automation, and intelligent tooling for Web3 operations.", "AI Infrastructure"],
+        ["A platform needs stablecoin settlement, merchant payments, and treasury movement.", "Payments & Stablecoins"],
+        ["An issuer needs audit support, penetration testing, and incident monitoring.", "Security & Audits"]
+      ];
+      const categories = ["Tokenization Platforms","Fiat On & Off Ramps","Custody Solutions","Compliance Infrastructure","Smart Contract Development","Legal & Regulatory","KYC / AML Providers","AI Infrastructure","Payments & Stablecoins","Security & Audits"];
+      const match = {score:0,streak:0,time:45,round:0,active:false,current:null,timer:null};
+      function renderMatch(){ $("[data-match-score]").textContent=match.score; $("[data-match-streak]").textContent=match.streak; $("[data-match-time]").textContent=match.time; $("[data-match-round]").textContent=match.active ? "Round " + match.round : "Ready"; }
+      function nextMatch(){ match.round += 1; match.current = prompts[Math.floor(Math.random()*prompts.length)]; const options = shuffle([match.current[1], ...shuffle(categories.filter(c => c !== match.current[1])).slice(0,3)]); $("[data-match-scenario]").textContent = match.current[0]; const grid = $("[data-match-choices]"); grid.innerHTML = ""; options.forEach((option) => { const btn=document.createElement("button"); btn.className="game-btn"; btn.type="button"; btn.textContent=option; btn.addEventListener("click", () => chooseMatch(option, btn)); grid.appendChild(btn); }); renderMatch(); }
+      function chooseMatch(option, btn){ if(!match.active) return; const ok=option===match.current[1]; btn.classList.add(ok ? "correct" : "wrong"); if(ok){match.streak += 1; match.score += 10 + Math.min(match.streak*2,20); match.time = Math.min(60, match.time + 2); $("[data-match-feedback]").textContent = "Correct. " + match.current[1] + " is the best category.";} else {match.streak=0; match.time=Math.max(0,match.time-4); $("[data-match-feedback]").textContent = "Close. This points to " + match.current[1] + ".";} renderMatch(); setTimeout(() => match.active && nextMatch(), 520); }
+      function startMatch(){ clearInterval(match.timer); Object.assign(match,{score:0,streak:0,time:45,round:0,active:true}); $("[data-match-start]").textContent="Restart"; $("[data-match-feedback]").textContent="Pick quickly. Correct answers add points and time."; nextMatch(); match.timer=setInterval(() => {match.time -= 1; renderMatch(); if(match.time <= 0){match.active=false; clearInterval(match.timer); $("[data-match-feedback]").textContent="Sprint complete. Final score: " + match.score + "."; $("[data-match-start]").textContent="Play Again"; $("[data-match-choices]").innerHTML=""; renderMatch();}},1000); }
+      $("[data-match-start]").addEventListener("click", startMatch); renderMatch();
+
+      const stackOrder = ["Legal & Regulatory","Tokenization Platforms","KYC / AML Providers","Custody Solutions","Payments & Stablecoins","Compliance Infrastructure"];
+      const stack = {step:0,score:0};
+      function renderStack(){ $("[data-stack-built]").textContent=stack.step; $("[data-stack-step]").textContent=Math.min(stack.step+1, stackOrder.length); $("[data-stack-score]").textContent=stack.score; const grid=$("[data-stack-choices]"); grid.innerHTML=""; shuffle(stackOrder).forEach(label => { const btn=document.createElement("button"); btn.className="game-btn"; btn.type="button"; btn.textContent=label; btn.disabled=stack.step>=stackOrder.length; btn.addEventListener("click", () => { const ok=label===stackOrder[stack.step]; btn.classList.add(ok ? "correct" : "wrong"); if(ok){stack.step += 1; stack.score += 15; $("[data-stack-feedback]").textContent = stack.step === stackOrder.length ? "Stack complete. That is a launch-ready path." : "Good. Next add " + stackOrder[stack.step] + ".";} else {stack.score=Math.max(0,stack.score-5); $("[data-stack-feedback]").textContent = "Not yet. The next layer should be " + stackOrder[stack.step] + ".";} setTimeout(renderStack, 480); }); grid.appendChild(btn); }); }
+      $("[data-stack-start]").addEventListener("click", () => {stack.step=0; stack.score=0; $("[data-stack-feedback]").textContent="Start with structure, then onboarding, asset safety, money movement and reporting."; renderStack();}); renderStack();
+
+      const riskControls = ["Sanctions Screening","Wallet Monitoring","KYC Check","Transfer Rules","Audit Trail","PEP Screening"];
+      const riskNoise = ["Logo Refresh","Discord Emoji","Meme Contest","Hero Gradient","Sticker Pack","Mascot Name"];
+      const risk = {score:0,round:1,lives:3};
+      function renderRisk(){ $("[data-risk-score]").textContent=risk.score; $("[data-risk-round]").textContent=risk.round; $("[data-risk-lives]").textContent=risk.lives; const items=shuffle([...shuffle(riskControls).slice(0,4), ...shuffle(riskNoise).slice(0,2)]); const grid=$("[data-risk-choices]"); grid.innerHTML=""; items.forEach(label => { const btn=document.createElement("button"); btn.className="game-btn"; btn.type="button"; btn.textContent=label; btn.addEventListener("click", () => { const ok=riskControls.includes(label); btn.classList.add(ok ? "correct" : "wrong"); btn.disabled=true; if(ok){risk.score += 10; $("[data-risk-feedback]").textContent = "Caught: " + label + ".";} else {risk.lives -= 1; $("[data-risk-feedback]").textContent = "Noise. Save attention for compliance controls."; if(risk.lives<=0){risk.score=0; risk.lives=3; risk.round=1; $("[data-risk-feedback]").textContent = "Reset. Compliance teams need precision.";}} $("[data-risk-score]").textContent=risk.score; $("[data-risk-lives]").textContent=risk.lives; }); grid.appendChild(btn); }); }
+      $("[data-risk-next]").addEventListener("click", () => {risk.round += 1; renderRisk();}); renderRisk();
+
+      const memoryPairs = [["KYC","Verify users"],["Custody","Safekeep assets"],["Legal","Structure offering"],["Payments","Move money"],["Audits","Secure code"],["AI","Automate analysis"]];
+      let memory = {first:null,lock:false,pairs:0,moves:0,best:localStorage.getItem("fluidrwaMemoryBest") || "--"};
+      function renderMemory(){ memory={first:null,lock:false,pairs:0,moves:0,best:localStorage.getItem("fluidrwaMemoryBest") || "--"}; $("[data-memory-pairs]").textContent=0; $("[data-memory-moves]").textContent=0; $("[data-memory-best]").textContent=memory.best; $("[data-memory-feedback]").textContent="Flip two cards. Match each vendor category with its buyer need."; const cards=shuffle(memoryPairs.flatMap(([a,b],idx)=>[{text:a,pair:idx},{text:b,pair:idx}])); const grid=$("[data-memory-grid]"); grid.innerHTML=""; cards.forEach((card) => { const btn=document.createElement("button"); btn.className="memory-card"; btn.type="button"; btn.textContent="?"; btn.dataset.text=card.text; btn.dataset.pair=card.pair; btn.addEventListener("click", () => flipMemory(btn)); grid.appendChild(btn); }); }
+      function flipMemory(btn){ if(memory.lock || btn.classList.contains("matched") || btn.classList.contains("revealed")) return; btn.classList.add("revealed"); btn.textContent=btn.dataset.text; if(!memory.first){memory.first=btn; return;} memory.moves += 1; $("[data-memory-moves]").textContent=memory.moves; const ok=memory.first.dataset.pair===btn.dataset.pair; if(ok){memory.first.classList.add("matched"); btn.classList.add("matched"); memory.pairs += 1; $("[data-memory-pairs]").textContent=memory.pairs; $("[data-memory-feedback]").textContent="Matched."; memory.first=null; if(memory.pairs===memoryPairs.length){const best=localStorage.getItem("fluidrwaMemoryBest"); if(!best || memory.moves < Number(best)){localStorage.setItem("fluidrwaMemoryBest", String(memory.moves)); $("[data-memory-best]").textContent=memory.moves;} $("[data-memory-feedback]").textContent="Board complete in " + memory.moves + " moves.";}} else {memory.lock=true; $("[data-memory-feedback]").textContent="Not a pair. Try the ecosystem logic."; setTimeout(() => {memory.first.classList.remove("revealed"); btn.classList.remove("revealed"); memory.first.textContent="?"; btn.textContent="?"; memory.first=null; memory.lock=false;},700);} }
+      $("[data-memory-reset]").addEventListener("click", renderMemory); renderMemory();
+    })();
+  </script>
+</body>
+</html>
